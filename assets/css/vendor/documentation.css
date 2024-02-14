@@ -1,0 +1,389 @@
+/********************
+ DOCUMENTATION PAGES START
+********************/
+:root {
+  --theme-default:#cf1432;
+}
+
+.documentation .cdx-header .header-contian .nav-iconlist ul li a i {
+  color: #ffffff;
+  font-size: 16px;
+}
+.documentation .table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+.documentation .table:not(:first-child) {
+  border-top: 1px solid currentColor;
+}
+.documentation .table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+.documentation .table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+.documentation .table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+.documentation .table-bordered thead td {
+  border-bottom-width: 2px;
+}
+.documentation .table-bordered thead th {
+  border-bottom-width: 2px;
+}
+.documentation .table-bordered td {
+  border: 1px solid #dee2e6;
+}
+.documentation .table-bordered th {
+  border: 1px solid #dee2e6;
+}
+.documentation .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(222, 226, 230, 0);
+}
+.documentation .card {
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.875rem;
+}
+.documentation .card .card-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+}
+.documentation .card .card-header .card-title {
+  margin-bottom: 0;
+}
+.documentation .card-body {
+  padding: 1.5rem;
+}
+.documentation .card-header {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 1rem 1.5rem;
+}
+.documentation .card-footer {
+  background-color: #fff;
+  border-top: 1px solid #e6e6e6;
+  padding: 1rem 1.5rem;
+}
+.documentation .sidebar {
+  background: #fff;
+  border-radius: 5px;
+  margin-top: 0;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  z-index: 1001;
+  width: 100%;
+}
+.documentation .sidebar .sidebar-menu > ul > li > a span {
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  display: inline-block;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+.documentation .sidebar.opened {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.documentation .sidebar-inner {
+  height: 100%;
+  min-height: 100%;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+.documentation .sidebar-menu {
+  padding: 25px;
+  position: fixed;
+  top: 120px;
+  width: 255px;
+  background-color: #ffffff;
+}
+.documentation .sidebar-menu h2 {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.documentation .sidebar-menu ul {
+  font-size: 15px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: block;
+}
+.documentation .sidebar-menu ul ul {
+  display: block;
+  padding-top: 13px;
+}
+.documentation .sidebar-menu ul ul ul a {
+  padding-left: 65px;
+}
+.documentation .sidebar-menu ul ul ul ul a {
+  padding-left: 85px;
+}
+.documentation .sidebar-menu li a {
+  color: #000;
+  display: block;
+  font-size: 16px;
+  height: auto;
+  padding: 0 20px;
+}
+.documentation .sidebar-menu li a:hover {
+  color: #cf1432;
+}
+.documentation .sidebar-menu > ul > li {
+  margin-bottom: 25px;
+  position: relative;
+}
+.documentation .sidebar-menu > ul > li > a {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0;
+  font-weight: 700;
+  position: relative;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+.documentation .sidebar-menu > ul > li > a:hover {
+  color: #cf1432;
+}
+.documentation .sidebar-menu > ul > li > ul > li a {
+  display: block;
+  font-size: 14px;
+  padding: 0 0 13px 20px;
+  position: relative;
+  color: #494f4d;
+}
+.documentation .sidebar-menu > ul > li > ul > li:last-child a {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.documentation .sidebar-menu > ul > li:last-child {
+  margin-bottom: 0;
+}
+.documentation .sidebar-menu > ul > li > a.active {
+  color: var(#cf1432);
+}
+.documentation .sidebar-menu > ul > li ul > li > a.active {
+  color: #cf1432;
+}
+.documentation .nav-link:focus {
+  color: #000;
+}
+.documentation .nav-link:hover {
+  color: #000;
+}
+.documentation .mobile_btn {
+  display: none;
+  float: left;
+}
+.documentation .slide-nav .sidebar {
+  margin-left: 0;
+}
+.documentation .page-wrapper {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  padding: 30px;
+  padding-top: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.documentation .page-wrapper > .content {
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #edecec;
+  border-radius: 5px;
+}
+.documentation .page-wrapper ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.documentation .page-wrapper ul li {
+  margin-bottom: 6px;
+  list-style: outside;
+}
+.documentation .page-wrapper .feature-list li {
+  margin-bottom: 20px;
+}
+.documentation .page-wrapper .feature-list li span {
+  font-weight: 700;
+  color: #000;
+}
+.documentation .page-header {
+  margin-bottom: 1.875rem;
+}
+.documentation .page-header ul li a {
+  text-decoration: underline;
+}
+.documentation .page-header h4 {
+  margin-bottom: 30px;
+}
+.documentation .logo {
+  margin-bottom: 30px;
+}
+.documentation .feature-list {
+  padding: 0 !important;
+  list-style: none;
+  margin-bottom: 20px;
+}
+.documentation .text-primary {
+  color: #0ce0ff !important;
+}
+.documentation .text-dark {
+  color: #000 !important;
+}
+.documentation .highlight-box {
+  background: #f7f8f8;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-x: auto;
+}
+.documentation .file-wrap {
+  background: #f7f8f8;
+  border-radius: 5px;
+  padding: 20px;
+}
+.documentation .file-wrap pre {
+  color: #e6e2df;
+}
+.documentation .file-wrap pre i {
+  color: #f6bf54;
+}
+.documentation .file-wrap pre span {
+  background: #e5e5e5;
+  border-radius: 2px;
+  color: #000;
+  margin-left: 10px;
+  padding: 2px 5px;
+}
+.documentation pre {
+  margin-bottom: 0;
+}
+.documentation .mb-30 {
+  margin-bottom: 30px;
+}
+.documentation .structure-wrap {
+  background: #2d2d2d;
+  border-radius: 5px;
+  padding: 40px;
+  margin-bottom: 20px;
+}
+.documentation .structure-wrap pre code {
+  color: #cacaca;
+}
+.documentation .img-wrap {
+  background: #f7f8f8;
+  border-radius: 5px;
+  padding: 20px;
+}
+.documentation .credit-list li {
+  color: #000;
+}
+.documentation .credit-list li a {
+  font-weight: 700;
+  color: #000;
+}
+.documentation .badge {
+  border-radius: 2px;
+  font-size: 12px;
+  margin-bottom: 19px;
+  font-weight: 400;
+  margin-right: 14px;
+}
+.documentation .text-blue {
+  color: #4b5f77 !important;
+}
+.documentation #changelog .highlight-box {
+  margin-bottom: 20px;
+}
+.documentation .action-list {
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+}
+.documentation .support-btn {
+  font-size: 18px;
+  color: #000;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.documentation .support-btn img {
+  margin-right: 10px;
+}
+.documentation section {
+  background: #f1f2f3;
+  margin-bottom: 20px;
+}
+.documentation .footer {
+  background: #cf1432;
+  padding: 24px 30px;
+  position: relative;
+}
+.documentation .footer p {
+  font-size: 15px;
+  color: #fff;
+}
+.documentation .footer .top-move {
+  background: #f87605;
+  border: 2px solid #f87605;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  border-radius: 5px;
+  float: right;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+.documentation .footer .top-move:hover {
+  background: 0 0;
+  border: 2px solid #969281;
+}
+.documentation .files {
+  background: #f7f8f8;
+  border-radius: 5px;
+  padding: 20px;
+}
+.documentation .files pre i {
+  color: #f6bf54;
+}
+.documentation .files pre span {
+  background: #e5e5e5;
+  border-radius: 2px;
+  color: #000;
+  margin-left: 10px;
+  padding: 2px 5px;
+}
+
+/********************
+ DOCUMENTATION PAGES END
+********************/
