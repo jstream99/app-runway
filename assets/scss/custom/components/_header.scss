@@ -1,0 +1,299 @@
+/*********************
+ 07  HEADER START
+**********************/
+.cdxtop-header{
+    padding-top:10px;
+    padding-bottom:10px;
+    .contact-list{
+        display: flex;
+        align-items: center;
+        >li{
+            +li{
+                margin-left:20px;
+            }
+        }
+        li{           
+            a{
+                color: $font-light;
+                font-weight: 500;               
+                text-transform: capitalize;
+                i{
+                    margin-right: 5px;
+                }
+            }           
+        }
+    }
+    .right-header{       
+        .contact-list{
+            width: fit-content;
+            margin-left: auto;
+        }
+    }
+    &.header-primary{
+        background-color: var(--theme-default);
+        .contact-list {
+            >li{
+               >a {
+                color: $white-color;
+                }
+            }
+        }
+    }
+}
+.cdx-header{
+    position: relative;
+    background-color: $white-color;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    z-index: 1;
+    .header-contian{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header-left{
+            .brand-logo{
+                img{
+                    width:175px;
+                    height: auto;
+                }
+            }
+        }
+
+        .nav-iconlist{
+            display: flex;
+            align-items: center;
+            >ul{
+                display: flex;
+                align-items: center;
+                >li{
+                    position: relative;
+                    a{                      
+                        svg{                           
+                            width:25px;
+                            height:25px;
+                            path{
+                                stroke: $codex-font-color;
+                            }
+                        }                        
+                        i{
+                            font-size:26px;
+                            color: var(--theme-default);
+                        }
+                        .nav-notification{
+                            position: absolute;
+                            top: -7px;
+                            right: -5px;
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: var(--theme-default);
+                            color: $white-color;
+                            font-size: 10px;
+                        }
+                    }
+                    +li{
+                        margin-left: 20px;
+                    }
+                }
+            }
+            .mobilemenu-toggle{
+                margin-left: 20px;
+            }
+        }
+        
+    }
+    &.fixed{
+        box-shadow:0 0 5px 0 $theme-border;
+    }
+}
+
+.search-bar{
+    position:fixed;
+    top: 0;
+    left: 0;  
+    background-color: $white-color;
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    transform: translateY(-100%);
+    transition: all 0.3s ease;   
+    z-index:1;    
+    .search-group{
+        background-color: $white-color;
+    }
+    .input-group{
+        width: 60%;
+        height: 100%;
+        margin: auto;
+        .input-group-text{
+            background-color: transparent;
+        }
+    }
+    .clsoe-search{
+        position: absolute;
+        top:15px;
+        right:15px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        background-color: rgba($theme-default,0.08);
+        
+        i{
+            color: var(--theme-default);
+        }
+    }
+    &.open{
+        transform: translateY(0);
+    }
+}
+
+.mobilemenu-toggle{
+    display: none;
+    cursor: pointer;
+    i{
+        font-size:20px;
+    }
+}
+
+
+.codex-menu{
+    >li{
+        a{
+            text-transform: uppercase;
+        }
+    }
+    li{
+        position: relative;
+        &.close-menu{
+            padding:20px;
+            margin-top: -20px;
+            margin-left: -20px;
+            margin-right: -20px;
+            border-bottom: 1px solid $theme-border;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-transform: capitalize;
+            font-weight: 600;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            i{
+                font-size: 24px;
+            }
+        }
+        a{
+            color: $codex-font-color;
+            font-weight:600;
+            font-size: 16px;           
+        }
+        .submenu-list,.secodnmenu-list{
+            a{
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+
+@media (min-width:1200px){
+    .codex-menu{
+        >li{
+            display: inline-block;       
+            &:nth-child(n+2){
+                margin-left: 30px;
+            }
+        }
+        li{
+            &.menu-item{               
+                &:hover{
+                    .submenu-list{
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0px);
+                    }        
+                }           
+                > a{
+                    display: inline-block;
+                    -webkit-transition: all 0.35s ease;
+                    transition: all 0.35s ease;  
+                    padding-bottom: 3px;                             
+                    &:before{
+                        position: absolute;
+                        -webkit-transition: all 0.35s ease;
+                        transition: all 0.35s ease;
+                    }
+                    &:before {
+                        bottom: 0;
+                        display: block;
+                        height: 3px;
+                        width: 0;
+                        border-radius: 3px;
+                        content: "";
+                        right:0;                    
+                        background-color: var(--theme-default);            
+                    }
+                    &:hover:before,
+                    &.active:before {
+                        opacity: 1;
+                        width: 100%;
+                        right:unset;
+                        left:0;                    
+                    }               
+                }           
+            }
+            .submenu-list,.secodnmenu-list{
+                position: absolute;
+                opacity: 0;
+                visibility: hidden;
+                background-color: $white-color;
+                padding-block-start: 15px;
+                padding-block-end: 15px;
+                padding-inline-start: 5px;
+                padding-inline-end: 5px;
+                width: 185px;
+                z-index: 2;
+                transition: all 0.4s ease;
+                border: 1px solid $theme-border;
+                a{
+                    color: $codex-font-color;
+                    padding: 3px 15px;
+                    font-size: 14px;                
+                    display: block;
+                    width: 100%;    
+                    i{
+                        top: 8px;
+                        position: absolute;
+                        right: 15px;
+                    }                  
+                 }              
+            }
+            .submenu-list{            
+                top: 100%;            
+                transform: translateY(15px);
+                >li{
+                    position: relative;
+                    .secodnmenu-list{
+                        left: 100%;
+                        top: 0;
+                    }
+                    &:hover{
+                        .secodnmenu-list{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }       
+            }
+        }
+    }
+}
+
+/*********************
+  HEADER END
+**********************/

@@ -1,0 +1,29 @@
+/****************
+ 06 TAB START
+*****************/
+/*tab*/
+.cdx-tab{
+    margin-bottom: 20px;
+    border-bottom: none;   
+    li{
+      a{
+        text-transform: capitalize;
+        border: 1px solid var(--theme-default);
+        padding: 8px 25px;
+        font-size: 16px;
+        i{
+            margin-right:10px;
+        }
+        &.active{
+          background-color: var(--theme-default);
+          color: $white-color;
+        }
+      }
+      +li{
+        margin-left: 15px;
+      }
+    }
+  }
+/****************
+ TAB END
+*****************/

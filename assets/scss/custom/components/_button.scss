@@ -1,0 +1,56 @@
+/*******************
+  04 BUTTON START
+*******************/
+$btn-colors:(
+    "primary": var(--theme-default),                 
+);
+.btn{
+  border-radius:5px;
+  padding:8px 25px;
+  &.btn-rounded{
+    border-radius:30px;
+  }
+  &.btn-sm{
+    padding: 5px 20px;
+  }
+}
+@each  $btn-colorname , $btn-color  in $btn-colors {
+  .btn-#{$btn-colorname}{
+        color: $white-color;           
+        background-color: $btn-color!important;
+        border-color: $btn-color!important;
+        font-weight:600;
+        position: relative;       
+        overflow: hidden;
+        transition: all 0.4s ease;        
+        &:hover{
+          background-color: $white-color !important;
+          border: 1px solid $btn-color;
+          color: $btn-color;              
+        }
+        &:focus,
+        &:active{
+          box-shadow: 0 0 0 0.25rem rgba($btn-color, 0.5);
+        }     
+  }        
+  .btn-outline-#{$btn-colorname}{
+    color: $btn-color;           
+    background-color: $white-color!important;   
+    border-color: $btn-color!important;
+    font-weight:600;
+    position: relative;   
+    overflow: hidden;
+    transition: all 0.4s ease;        
+    &:hover{
+      background-color: $theme-default !important;     
+      color: $white-color;              
+    }
+    &:focus,
+    &:active{
+      box-shadow: 0 0 0 0.25rem rgba($btn-color, 0.5);
+    }     
+}   
+}
+/*******************
+  BUTTON END
+*******************/
